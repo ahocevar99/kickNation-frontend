@@ -1,0 +1,136 @@
+.soccer-image {
+   max-height: 800px;
+   position: relative;
+   top: 60px;
+   left: 40px;
+   bottom: 50px;
+   border-radius: 10px;
+   border: solid 2px;
+   z-index: -1;
+   min-height: 800px;
+   width: 1200px;
+}
+
+/* REPLACE PLAYERS STYLING */
+
+.replace-players-container {
+   width: 550px;
+   height: 500px;
+   position: absolute;
+   top: 250px;
+   left: 50%;
+   margin-left: -250px;
+   border: 2px solid rgb(70, 70, 70);
+   border-radius: 20px;
+   z-index: 2;
+   display: block;
+}
+
+
+.replace-players-container {
+   align-items: center;
+}
+
+.replace-title {
+   margin-top: 1rem;
+   display: flex;
+   justify-content: center;
+   color: rgb(231, 231, 231);
+   font-size: 1.6rem;
+}
+
+.replace-underline {
+   position: absolute;
+   width: 16rem;
+   height: 0.1rem;
+   background-color: rgb(231, 231, 231);
+   left: 50%;
+   margin-left: -8rem;
+   margin-top: 0.5rem;
+}
+
+.replace-players-flex {
+   position: absolute;
+   display: flex;
+   width: 90%;
+   left: 5%;
+   top: 5rem;
+   justify-content: space-around;
+}
+
+.replace-players-flex .old-player, .replace-players-flex .new-player{
+   display:flex;
+   flex-direction: column;
+}
+
+.player-name-replace {
+   font-size: 1.3rem;
+   color: rgb(231, 231, 231);
+   margin-bottom: 0.5rem;
+}
+
+.player-rating-replace {
+   font-size: 1.3rem;
+   color: rgb(231, 231, 231);
+   margin-bottom: 0.5rem;
+}
+
+.player-country-replace {
+   font-size: 1.3rem;
+   color: rgb(231, 231, 231);
+   margin-bottom: 0.5rem;
+}
+
+.player-position-replace {
+   font-size: 1.3rem;
+   color: rgb(231, 231, 231);
+   margin-bottom: 0.5rem;
+}
+
+.replace-old-player {
+   position: absolute;
+   bottom: 30px;
+   right: 50px;
+   cursor: pointer;
+   background-color: rgb(241, 241, 241);
+   padding: 1rem;
+   font-size: 1.3rem;
+   border-radius: 1.2rem;
+   color: rgb(70, 70, 70);;
+}
+
+.replace-old-player:hover {
+   background-color: rgb(180, 180, 159);
+}
+
+.keep-old-player {
+   position: absolute;
+   bottom: 30px;
+   left: 50px;
+   cursor: pointer;
+   background-color: rgb(241, 241, 241);;
+   padding: 1rem;
+   font-size: 1.3rem;
+   border-radius: 1.2rem;
+   color: rgb(70, 70, 70);;
+}
+
+.keep-old-player:hover {
+   background-color: rgb(180, 180, 159);
+}
+
+.display-bonuses {
+   display: flex;
+   justify-content: space-evenly;
+   margin-top: 40%
+}
+
+.old-bonuses,.text-bonuses, .new-bonuses {
+   font-size: 1.3rem;
+   color:rgb(231, 231, 231);
+   display: flex;
+   flex-direction: column;
+}
+
+
+
