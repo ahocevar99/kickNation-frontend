@@ -15,7 +15,7 @@ const Lineup = ({setAlreadyReplaced, nationBonus, ratingBonus, positionBonus}) =
 
   useEffect(() => {
     const fetchTeam = async () => {
-      const response = await axios.get(`https://kicknation-backend-5.onrender.com?username=${username}`);
+      const response = await axios.get(`https://kicknation-backend-5.onrender.com/myTeam?username=${username}`);
       setPlayers(response.data.squad);
     }
     fetchTeam()
