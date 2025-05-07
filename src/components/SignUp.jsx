@@ -10,9 +10,11 @@ const SignUp = () => {
     const [username, setUsername] = useState('')
     const [clubName, setClubName] = useState('')
     const [password, setPassword] = useState('')
+    const [loading, setLoading] = useState(false);
 
     const signUpSubmit = async (e) => {
         e.preventDefault()
+        setLoading(true)
         try {
             const response = await axios.post('https://kicknation-backend-5.onrender.com/register', {
                 username: username,
@@ -28,6 +30,8 @@ const SignUp = () => {
             }
         } catch (error) {
             console.error("Error sending data: ", error)
+        } finally {
+            setLoading(false)
         }
     }
 
@@ -56,7 +60,7 @@ const SignUp = () => {
                             </div>
                         </div>
 
-                        <button className="submit border rounded-[4rem] w-[15rem] h-[3rem] p-1 mt-[2rem] bg-green-900 hover:bg-green-950 text-gray-100 text-lg">Sign Up</button>
+                        <button className="submit border rounded-[4rem] w-[15rem] h-[3rem] p-1 mt-[2rem] bg-green-900 hover:bg-green-950 text-gray-100 text-lg" disabled={loading} >{loading? 'Creating your Club ...' : 'Sign Up'}</button>
                     </form>
                     <div className='mt-[2rem] w-[15rem] flex justify-evenly mb-[2rem]'>
                         <div className='text-gray-200'>Already have an account? </div>
