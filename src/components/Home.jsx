@@ -17,7 +17,7 @@ const Home = () => {
     const [nations, setNations] = useState({})
     useEffect(() => {
         const fetchBonus = async () => {
-            const response = await axios.get(`https://kicknation-backend-5.onrender.com?username=${username}`)
+            const response = await axios.get(`https://kicknation-backend-5.onrender.com/getData?username=${username}`)
             setNationBonus(response.data.nationBonus)
             setRatingBonus(response.data.ratingBonus)
             setPositionBonus(response.data.positionBonus)
