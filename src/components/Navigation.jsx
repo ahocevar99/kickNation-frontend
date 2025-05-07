@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { gsap } from "gsap";
 
 
 
@@ -17,6 +18,19 @@ const Navigation = ({ active, username }) => {
     else setLogOutDialog(false)
   }
 
+  useEffect (() => {
+    logOutDialog ? gsap.to('#logoutDialog', {
+      opacity:1,
+      display:'block',
+      duration:1,
+      ease: 'power2.out'}) 
+    : gsap.to('#logoutDialog', {
+      opacity:0,
+      display:'none',
+      duration:1,
+      ease: 'power2.out'})
+  }, [logOutDialog])
+
 
   return (
     <>
@@ -27,7 +41,7 @@ const Navigation = ({ active, username }) => {
       <div className='absolute top-[2rem] right-10'>
         <i class="fa-solid fa-arrow-right-from-bracket text-gray-200 text-2xl cursor-pointer hover:text-gray-400" onClick={()=>toggleLogOutDialog()}></i>
       </div>
-      <div className={`absolute top-[1.5rem] right-20 border border-gray-200 text-gray-200 p-2 text-center cursor-pointer hover:text-gray-600 ${logOutDialog === true ? 'flex' : 'hidden'}`} onClick={()=>{navigate('/')}}>
+      <div id='logoutDialog' style={{ oopacity:0, display:'none'}} className={`absolute right-20 top-[1.5rem] border border-gray-200 bg-blue-400  text-gray-950 rounded-[1rem] p-2 text-center cursor-pointer hover:text-gray-600`} onClick={()=>{navigate('/')}}>
         LogOut
       </div>
     </>
