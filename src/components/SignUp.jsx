@@ -14,7 +14,7 @@ const SignUp = () => {
     const signUpSubmit = async (e) => {
         e.preventDefault()
         try {
-            const response = await axios.post('http://localhost:3000/register', {
+            const response = await axios.post('https://kicknation-backend-5.onrender.com/register', {
                 username: username,
                 clubName: clubName,
                 password: password,

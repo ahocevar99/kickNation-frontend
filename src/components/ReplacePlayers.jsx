@@ -11,7 +11,7 @@ const ReplacePlayers = ({ username, bothPlayers, setBothPlayers, setAlreadyRepla
     const [newPositionBonus, setNewPositionBonus] = useState(0);
     const replacePlayerFunction = async () => {
         try {
-            const response = await axios.put("http://localhost:3000/replacePlayer", {
+            const response = await axios.put("https://kicknation-backend-5.onrender.com/replacePlayer", {
                 username: username,
                 oldPlayerName: bothPlayers[0].playerName,
                 newPlayerName: bothPlayers[1].playerName,
@@ -31,7 +31,7 @@ const ReplacePlayers = ({ username, bothPlayers, setBothPlayers, setAlreadyRepla
 
     useEffect(() => {
         const getNewBonuses = async () => {
-            const response = await axios.get(`http://localhost:3000/calculateBonusesWhenReplacing?username=${username}&oldPlayer=${bothPlayers[0]._id}&newPlayer=${encodeURIComponent(JSON.stringify(bothPlayers[1]))}`)
+            const response = await axios.get(`https://kicknation-backend-5.onrender.com/calculateBonusesWhenReplacing?username=${username}&oldPlayer=${bothPlayers[0]._id}&newPlayer=${encodeURIComponent(JSON.stringify(bothPlayers[1]))}`)
             setNewNationBonus(response.data.nationBonus[0]);
             setNewRatingBonus(response.data.ratingBonus);
             setNewPositionBonus(response.data.positionBonus);

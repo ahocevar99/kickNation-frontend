@@ -12,7 +12,7 @@ const Login = () => {
     const loginSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:3000/login', {
+            const response = await axios.post('https://kicknation-backend-5.onrender.com/login', {
                 username: username,
                 password: password,
             })
