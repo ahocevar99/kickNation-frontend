@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom'
 import axios from 'axios'
 import NewPlayer from './NewPlayer.jsx';
 import Player from './Player.jsx';
-import { newPlayer } from '../../../backend/functions.js';
+
 
 
 const Buy = ({ alreadyReplaced }) => {
@@ -22,7 +22,7 @@ const Buy = ({ alreadyReplaced }) => {
         if (hasMoney) {
             setNewPlayers([])
             setVisibility(false)
-            const response = await axios.get(`http://localhost:3000/buyPack?username=${username}`);
+            const response = await axios.get(`https://kicknation-backend-5.onrender.com/buyPack?username=${username}`);
             setNewPlayers(response.data.squad)
             setVisibility(true)
         }
@@ -34,7 +34,7 @@ const Buy = ({ alreadyReplaced }) => {
 
     useEffect(() => {
         const getMoney = async () => {
-            const response = (await axios.get(`http://localhost:3000/getData?username=${username}`));
+            const response = (await axios.get(`https://kicknation-backend-5.onrender.com/getData?username=${username}`));
             setMoney(response.data.money)
             if (money < 100) setHasMoney(false)
         }
