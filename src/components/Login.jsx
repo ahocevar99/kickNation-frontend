@@ -25,10 +25,12 @@ const Login = () => {
             if (response.data.message == "Successful login") {
                 navigate('/home', { state: { username: username } });
             }
+            else setLoading(false)
         } catch (error) {
             console.error('Error sending data: ', error);
+            setLoading(false)
         } finally {
-            setLoading(true)
+            setLoading(false)
         }
 
     }

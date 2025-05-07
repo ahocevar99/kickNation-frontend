@@ -28,8 +28,10 @@ const SignUp = () => {
             if (response.data.message == "Successful signup") {
                 navigate("/")
             }
+            else setLoading(false)
         } catch (error) {
             console.error("Error sending data: ", error)
+            setLoading(false)
         } finally {
             setLoading(false)
         }
