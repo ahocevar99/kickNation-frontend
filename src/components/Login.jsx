@@ -15,6 +15,9 @@ const Login = () => {
             const response = await axios.post('https://kicknation-backend-5.onrender.com/login', {
                 username: username,
                 password: password,
+            },
+            {
+                withCredentials: true,
             })
             if (response.data.message == "Successful login") {
                 navigate('/home', { state: { username: username } });

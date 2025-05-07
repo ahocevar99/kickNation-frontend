@@ -18,6 +18,9 @@ const SignUp = () => {
                 username: username,
                 clubName: clubName,
                 password: password,
+            },
+            {
+                withCredentials: true,
             })
             console.log(response.data.message)
             if (response.data.message == "Successful signup") {
