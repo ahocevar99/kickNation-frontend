@@ -68,7 +68,7 @@ const SignUp = () => {
                     </div>
                 </div>
             </div>
-            <p className='mt-[2rem] flex w-full m-auto items-center justify-center lg:mb-[2rem] text-xl text-shadow-xl font-serif text-gray-200'>Lead your Team to glory</p>
+            <p className='hidden mt-[2rem] lg:flex w-full m-auto items-center justify-center lg:mb-[2rem] text-xl text-shadow-xl font-serif text-gray-200'>Lead your Team to glory</p>
         </div>
     )
 }
