@@ -42,7 +42,7 @@ const SignUp = () => {
                     <img src={titlePhoto} alt="" className='w-full h-full object-cover rounded-l-[1rem]' />
                 </div>
                 <div className='w-full md:w-[40rem] sm:w-[30rem] flex flex-col justify-center items-center'>
-                    <h1 className='text-green-100 text-6xl lg:text-3xl text-shadow-lg mt-[1rem] font-serif'>KickNation</h1>
+                    <h1 className='text-green-100 text-4xl sm:text-5xl lg:text-3xl text-shadow-lg mt-[1rem] font-serif'>KickNation</h1>
                     <p className="text-3xl lg:text-5xl mt-[3rem] underline decoration-solid text-gray-100">Sign Up</p>
                     <form onSubmit={signUpSubmit}>
                         <div className="mt-[4rem] flex flex-col m-auto items-center justify-center">
@@ -68,7 +68,7 @@ const SignUp = () => {
                     </div>
                 </div>
             </div>
-            <p className='flex w-full m-auto items-center justify-center mb-[6rem] lg:mb-[2rem] text-xl text-shadow-xl font-serif text-gray-200'>Lead your Team to glory</p>
+            <p className='mb-[2rem]  flex w-full m-auto items-center justify-center md:mb-[6rem] lg:mb-[2rem] text-xl text-shadow-xl font-serif text-gray-200'>Lead your Team to glory</p>
         </div>
     )
 }
