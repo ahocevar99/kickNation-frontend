@@ -32,11 +32,11 @@ const Login = () => {
 
     return (
         <div className='min-h-screen flex flex-col justify-between'>
-            <div className='mt-[10rem] h-[35rem] w-[30rem] justify-center items-center lg:flex lg:flex-row lg:w-[60rem] xl:w-[70rem] 2xl:w-[80rem] m-auto border border-white lg:border-gray-800 rounded-[1rem] lg:justify-evenly shadow-2xl md:w-[40rem] sm:w-[30rem]'>
+            <div className='mt-[10rem] h-[35rem] w-[90%] justify-center items-center lg:flex lg:flex-row lg:w-[60rem] xl:w-[70rem] 2xl:w-[80rem] m-auto border border-white lg:border-gray-800 rounded-[1rem] lg:justify-evenly shadow-2xl md:w-[40rem] sm:w-[30rem]'>
                 <div className='hidden lg:block lg:w-[60rem] h-[35rem]'>
                     <img src={titlePhoto} alt="" className='w-full h-full object-cover rounded-l-[1rem]' />
                 </div>
-                <div className='w-[30rem] md:w-[40rem] sm:w-[30rem] flex flex-col justify-center items-center'>
+                <div className='w-full md:w-[40rem] sm:w-[30rem] flex flex-col justify-center items-center'>
                     <h1 className='text-green-100 text-6xl lg:text-3xl text-shadow-lg mt-[1rem] font-serif'>KickNation</h1>
                     <p className="text-3xl lg:text-5xl mt-[3rem] underline decoration-solid text-gray-100">Sign In</p>
                     <form onSubmit={loginSubmit}>
